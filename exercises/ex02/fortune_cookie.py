@@ -3,11 +3,10 @@
 __author__ = "730225468"
 
 from random import randint
-print(randint(1, 20))
-
-number: int = randint(1, 20)
 
 print("Your fortune cookie says...")
+
+number = randint(1, 20)
 
 if number <= 5:
     print("Today will bring you joy and love!")
