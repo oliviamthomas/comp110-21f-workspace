@@ -6,7 +6,7 @@ __author__ = "730225468"
 TREE: str = '\U0001F332'
 
 number: int = int(input("Depth: "))
-space: str = " " + TREE
+space: str = "" + TREE
 
 
 if number > 0:
