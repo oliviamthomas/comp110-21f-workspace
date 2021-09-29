@@ -6,20 +6,24 @@ __author__ = "730225468"
 def all(x: list[int], y: int) -> bool:
     """A list of ints that will return True if all int values are the same."""
     index: int = 0
+    if len(x) == 0: 
+        return False
     while index < len(x):
-        if x[index] == y:
-            index += 1
         if x[index] != y:
             return False
+        if x[index] == y:
+            index += 1
     return True    
 
 
-print(all([1, 1, 2, 1], 1))
+print(all([2, 1, 2], 2))
 
 
 def is_equal(x: list[int], y: list[int]) -> bool:
     """Two lists of ints that will return True if both lists are the same."""
     index: int = 0
+    if len(x) != len(y):
+        return False
     while index < len(y):
         if x[index] != y[index]:
             return False
@@ -28,7 +32,7 @@ def is_equal(x: list[int], y: list[int]) -> bool:
     return True
 
 
-print(is_equal([1, 1, 2], [1, 1, 2]))
+print(is_equal([1, 2, 3], [1, 2, 3]))
 
 
 def max(input: list[int]) -> int:
