@@ -20,14 +20,16 @@ print(only_evens([1, 2, 3, 4, 5]))
 
 def sub(list1: list[int], i_start: int, i_end: int) -> list[int]:
     """Subset of a given list."""
+    i_low = i_start
+    i_high = i_end
     list2: list[int] = []
     if len(list1) == 0:
         return[]
-    if i_end + 1 > len(list1):
-        i_end = len(list1)
-        while i_start < i_end:
-            list2.append(list1[i_start])
-            i_start += 1
+    if i_high + 1 > len(list1):
+        i_high = len(list1)
+        while i_low < i_high:
+            list2.append(list1[i_low])
+            i_low += 1
     return list2
         
 
