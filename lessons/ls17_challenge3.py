@@ -24,4 +24,6 @@ def differences(a: list[int], b: list[int]) -> int:
 xs: list[int] = [1, 3, 3, 4, 5]
 ys: list[int] = [1, 2, 3]
 print(differences(xs, ys))
-# try doing the memory diagram with (ys, xs) in print stateemnt
+# try doing the memory diagram with (ys, xs) in print statement
+# try with (xs, xs)
+# try with (ys, ys)
