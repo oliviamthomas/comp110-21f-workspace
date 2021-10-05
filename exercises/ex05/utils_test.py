@@ -8,7 +8,7 @@ __author__ = "730225468"
 
 def test_only_evens() -> None:
     list1: list[int] = []
-    assert only_evens(list1) == []
+    assert only_evens(list1) == [2, 4]
 
 
 def test_sub_edge() -> None:

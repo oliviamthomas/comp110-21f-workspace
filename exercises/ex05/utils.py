@@ -9,7 +9,7 @@ def only_evens(list1: list[int]) -> list[int]:
     list2: list[int] = []
 
     while i < len(list1):
-        if list1[i] % 2:
+        if list1[i] % 2 == 0:
             list2.append(list1[i])
         i += 1
     return list2
@@ -27,9 +27,11 @@ def sub(list1: list[int], i_start: int, i_end: int) -> list[int]:
         return[]
     if i_high + 1 > len(list1):
         i_high = len(list1)
-        while i_low < i_high:
-            list2.append(list1[i_low])
-            i_low += 1
+    if i_low < 0:
+        i_low = 0
+    while i_low < i_high:
+        list2.append(list1[i_low])
+        i_low += 1
     return list2
         
 
