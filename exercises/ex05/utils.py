@@ -3,19 +3,22 @@
 __author__ = "730225468"
 
 
+def main() -> None:
+    """Start of the functions."""
+    print(only_evens([1, 2, 3, 4, 5]))
+    print(sub([1, 2, 4, 15], 1, 3))
+    print(concat([1, 2, 3, 4], [5, 6, 7, 8]))
+
+
 def only_evens(list1: list[int]) -> list[int]:
     """Find only the even elements within a list."""
     i: int = 0
     list2: list[int] = []
-
     while i < len(list1):
         if list1[i] % 2 == 0:
             list2.append(list1[i])
         i += 1
     return list2
-
-
-print(only_evens([1, 2, 3, 4, 5]))
 
 
 def sub(list1: list[int], i_start: int, i_end: int) -> list[int]:
@@ -33,9 +36,6 @@ def sub(list1: list[int], i_start: int, i_end: int) -> list[int]:
         list2.append(list1[i_low])
         i_low += 1
     return list2
-        
-
-print(sub([1, 2, 4, 15], 1, 3))
 
 
 def concat(list1: list[int], list2: list[int]) -> list[int]:
@@ -54,4 +54,5 @@ def concat(list1: list[int], list2: list[int]) -> list[int]:
     return both_lists
 
 
-print(concat([1, 2, 3, 4], [5, 6, 7, 8]))
+if __name__ == "__main__":
+    main()
