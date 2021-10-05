@@ -42,13 +42,15 @@ def concat(list1: list[int], list2: list[int]) -> list[int]:
     """Two lists that will come together."""
     both_lists: list[int] = []
     i: int = 0
-    i2: int = 0
-    while i < 4:
-        list1.append(i)
+    j: int = 0
+    if list1 and list2 == 0:
+        return []
+    while i < len(list1):
+        both_lists.append(list1[i])
         i += 1
-    while i2 < 4:
-        list2.append(i2)
-        i2 += 2
+    while j < len(list2):
+        both_lists.append(list2[i])
+        j += 1
     return both_lists
 
 
