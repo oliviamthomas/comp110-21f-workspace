@@ -18,21 +18,20 @@ def only_evens(list1: list[int]) -> list[int]:
 print(only_evens([1, 2, 3, 4, 5]))
 
 
-def sub(list1: list[int]) -> list[int]:
+def sub(list1: list[int], i_start: int, i_end: int) -> list[int]:
     """Subset of a given list."""
-    i_start: int = 0
-    i_end: int = 10
+    list2: list[int] = []
+    if len(list1) == 0:
+        return[]
+    if i_end + 1 > len(list1):
+        i_end = len(list1)
+        while i_start < i_end:
+            list2.append(list1[i_start])
+            i_start += 1
+    return list2
+        
 
-    while i_start < len(list1):
-        if len(list1) < i_end:
-            list1[i_start] += 1
-            i_start += 2
-        else:
-            return list1
-    return list1
-
-
-print(sub([1, 2, 4, 15]))
+print(sub([1, 2, 4, 15], 1, 3))
 
 
 def concat(list1: list[int], list2: list[int]) -> list[int]:
