@@ -49,7 +49,7 @@ def concat(list1: list[int], list2: list[int]) -> list[int]:
         both_lists.append(list1[i])
         i += 1
     while j < len(list2):
-        both_lists.append(list2[i])
+        both_lists.append(list2[j])
         j += 1
     return both_lists
 
