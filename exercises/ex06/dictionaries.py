@@ -4,6 +4,7 @@ __author__ = "730225468"
 
 
 def main() -> None:
+    """Start of the functions."""
     print(invert({"Olivia": "Colton", "Emily": "Bryan"}))
     print(favorite_color({"Olivia": "Blue", "Colton": "Blue", "Emily": "Pink", "Bryan": "Green"}))
     print(count(["Olivia", "Colton", "Olivia", "Bryan"]))
@@ -44,6 +45,7 @@ def favorite_color(input: dict[str, str]) -> str:
 
 
 def count(x: list[str]) -> dict[str, int]:
+    """Results in a count of how often a value appears in the list."""
     result: dict[str, int] = {}
     item: str = ""
     for item in x:
